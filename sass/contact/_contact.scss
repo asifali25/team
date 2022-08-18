@@ -1,0 +1,100 @@
+@use '../util/' as u;
+
+.contact {
+    width: 80%; 
+    height: 100vh;   
+    margin: 100px auto;
+    position: relative;
+
+    &__container {
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;        
+    }
+
+    &__container-box-one {
+        margin-bottom: 15px;       
+    }
+
+    &__container-box-one-heading {
+        font-size: 3.3rem;
+        color: u.$font-color;
+        margin-bottom: 1%;
+    }    
+    
+    &__container-box-one-heading-span {
+        color: u.$main-color;
+    }
+
+    &__container-box-one {
+        flex: 30%;
+        margin-right: 20px;
+    }
+
+    &__container-box-one-email, &__container-box-one-phone, &__container-box-one-add {
+        font-size: 1.8rem;
+        color: u.$font-color;
+        padding: 5px;
+    }
+
+    @media screen and (max-width: 400px) {
+        &__container-box-one-heading {
+            font-size: 2.5rem;
+        }
+
+        &__container-box-one-email, &__container-box-one-phone, &__container-box-one-add {
+            font-size: 1.5rem;
+        }
+    
+    }
+
+    &__container-box-two {
+        flex: 60%;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    }
+
+    &__container-small-box-h1 {
+        color: u.$font-color;
+    }
+
+    &__container-small-box-h2 {
+        color: u.$font-color;
+    }
+
+    &__container-small-box-email {
+        font-size: 1.3rem;
+        color: u.$font-color;
+    }
+
+    @media screen and (max-width: 400px) {
+        &__container-small-box-h1 {
+            color: u.$font-color;
+            font-size: 1.3rem;
+        }
+    
+        &__container-small-box-h2 {
+            color: u.$font-color;
+            font-size: 1.3rem;
+        }
+    
+        &__container-small-box-email {
+            font-size: 1rem;
+            color: u.$font-color;
+            
+        }
+    }
+}
+
+.fa-brands {
+    font-size: 3rem;
+    padding: 10px;
+    color: u.$font-color;
+}

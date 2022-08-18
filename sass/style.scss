@@ -1,0 +1,35 @@
+@forward 'hero';
+@forward 'util';
+@forward 'intro';
+@forward 'carousel';
+@forward 'footer';
+@forward 'faq';
+@forward 'contact';
+@forward 'login'; 
+@use './util/' as u;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Cabin', sans-serif;
+}
+
+body {
+    background-color: u.$background;
+    overflow-x: hidden;
+}
+
+
+.container {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+
+
+

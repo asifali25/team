@@ -1,0 +1,85 @@
+@use '../util/' as u; 
+
+.login {
+    width: 80%;
+    margin: 200px auto;
+    position: relative;
+
+    &__headline {
+        text-align: center;
+        font-size: 8.4rem;
+        color: u.$font-color;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 500px) {
+        &__headline {
+            text-align: center;
+            font-size: 6rem;
+            color: u.$font-color;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__container { 
+        width: min(100%, 526px);      
+        border: 1px solid u.$font-color;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
+    &__container-form {
+        width: 80%;
+        margin: 80px auto;
+    }
+
+    &__container-form input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 30px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid u.$font-color;
+        outline: none;
+        font-size: 1.5rem;
+    }
+
+
+    &__container-form-button {
+        padding: 2% 20%;
+        background-color: u.$main-color;
+        border: none;
+        outline: none;
+        display: block;
+        margin: 40px auto;
+        border-radius: 10px;
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+
+    &__container-form-link {
+        max-width: fit-content;
+        margin: 0 auto;      
+    }
+
+    &__container-form-forget {
+        font-size: 1.5rem;
+        padding-right: 5px;        
+        border-right: 1px solid u.$font-color;
+    }
+
+    &__container-form-signup {
+        font-size: 1.5rem;       
+    }
+
+    @media screen and (max-width: 603px) {
+        &__container-form-forget {
+            font-size: 1rem; 
+            padding-left: 0;            
+        }
+    
+        &__container-form-signup {
+            font-size: 1rem;
+        }
+    }
+}

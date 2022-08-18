@@ -1,0 +1,148 @@
+@use '../util/' as u;
+
+.intro {
+    width: 100vw;
+    position: relative;
+    margin-bottom: 50px;
+
+    &__container {        
+        width: 100%;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 8%;       
+    }
+   
+
+    &__container__text {
+        margin-left: 10%;
+        flex-basis: min(100%, 600px);
+        opacity: 0;
+        transform: translate(-200px);        
+        transition: all 1s ease;
+    }
+
+    &__container__text.text-transform {
+        transform: translate(0);
+        opacity: 1;
+    }
+
+    @keyframes lazy {
+        from {
+            transform: translateY(50px);
+            opacity: 0;
+           
+        }
+        to {            
+            transform: translateY(0);
+            opacity: 1;           
+        }
+    }
+
+    &__container__img {
+        flex-basis: min(100%, 800px);
+        opacity: 0;
+        transition: all 2s ease;
+        transform: translateY(50px);
+    }
+
+    &__container__img.opacity {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    &__container__img img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;      
+    }
+
+    @media screen and (max-width: 1555px) {
+        &__container__text {
+            flex: 40%;
+            padding-right: 10%;
+        }
+
+        &__container__img {
+            flex: 40%;
+        }
+    }
+
+    @media screen and (max-width: 1333px) {
+        &__container__text {
+            flex: 100%;
+            padding-right: 10%;
+        }
+
+        &__container__img {
+            flex: 50%;
+        }
+    }
+}
+
+.qualityHeading {
+    width: min(100%, 500px);
+    font-size: 5.5rem;
+    margin-bottom: 4%;
+    color: u.$font-color;
+}
+
+@media screen and (max-width: 400px) {
+    .qualityHeading {        
+        font-size: 4rem;        
+    }
+} 
+
+.qualityPara {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin-bottom: 6%;
+    color: u.$font-color; 
+}
+
+@media screen and (max-width: 400px) {
+    .qualityPara {
+        font-size: 1.5rem;
+    }
+} 
+
+.qualityLink {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: u.$main-color;
+    position: relative;
+}
+
+.qualityLink::after {
+    content: "\27F6";
+    position: absolute;
+    left: 90px
+}
+
+.containerTwo {
+    width: 80%;
+    @media screen and (max-width: 1333px) {
+        flex-wrap:wrap-reverse;
+    }
+}
+
+.textTwo {
+    margin-bottom: 6%;
+    margin-left: 0;
+}
+
+.imgTwo {
+    width: min(100%, 600px);
+}
+
+.containerThree {
+    width: 80%;
+    @media screen and (max-width: 1333px) {
+        flex-wrap:wrap;
+    }
+}

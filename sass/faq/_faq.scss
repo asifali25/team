@@ -1,0 +1,150 @@
+@use '../util/' as u;
+
+.faq {
+    width: 70%;
+    height: 70vh; 
+    margin: 10% auto;   
+
+    &__heading {
+        width: 100%;
+        text-align: center;
+        font-size: 7rem;
+        margin-bottom: 3%;
+        color: u.$font-color;
+        @media screen and (max-width: 1000px) {
+            font-size: 6rem;
+        }
+
+        @media screen and (max-width: 500px) {
+            font-size: 4rem;
+        }
+    }
+
+   
+
+    &__container {
+        width: 100%;
+        display: flex;
+        margin-bottom: 2%;
+
+    }
+    
+    &__container-sign {
+        width: 100px;
+        height: 50px;
+        margin-top: 0.5%;
+        margin-right: 10px;
+        position: relative;    
+    }
+
+    @media screen and (max-width: 700px) {
+        &__container-sign {
+            width: 120px;                   
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        &__container-sign {
+            width: 150px;
+        }
+    }
+
+    @media screen and (max-width: 380px) {
+        &__container-sign {
+            width: 200px;           
+        }
+    }
+
+    @media screen and (max-width: 280px) {
+        &__container-sign {
+            width: 350px;       
+        }
+    }
+
+    &__container-sign-one {
+        top: 25%;
+        width: 25px;
+        height: 2px;
+        background-color: u.$font-color;
+        position: absolute;
+        z-index: -2;                
+    }
+
+    &__container-sign-two {
+        top: 25%;
+        position: absolute;
+        opacity: 1;
+        width: 25px;
+        height: 2px;
+        transform: rotate(90deg);
+        background-color: u.$font-color; 
+        z-index: -3;
+        transition: all 0.5s ease;      
+    }
+
+    &__container-sign-two.disap {
+        top: 50%;
+        opacity: 0;
+    }
+   
+
+    &__container-text-h1 {
+        font-size: 2.8rem;
+        color: u.$font-color;
+        margin-bottom: 10px;
+    }
+
+    @media screen and (max-width: 800px) {
+        &__container-text-h1 {
+            font-size: 1.5rem;           
+        }
+    }
+
+    &__container-text-p {
+        font-size: 1.8rem;
+        overflow: hidden;
+        height: 0;
+        transition: height 0.5s ease;        
+    }
+
+    @media screen and (max-width: 800px) {
+        &__container-text-p {
+            font-size: 1.1rem;     
+        }
+    }
+
+    &__container-text-p.show {
+        height: auto;
+        transition: height 0.5s ease;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+ .faq {
+    margin-top: 15%;
+ }       
+}
+
+@media screen and (max-width: 700px) {
+    .faq {
+       margin-top: 20%;
+    }       
+}
+
+@media screen and (max-width: 500px) {
+    .faq {
+       margin-top: 25%;
+    }       
+}
+
+@media screen and (max-width: 350px) {
+    .faq {
+       margin-top: 40%;
+    }       
+}
+
+@media screen and (max-width: 250px) {
+    .faq {
+       margin-top: 50%;
+    }       
+}
